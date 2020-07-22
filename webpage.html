@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title></title>
+<style> 
+#title {
+    text-align: center;
+}
+
+#time {
+    
+}
+</style>
+
+</head>
+
+<body>
+    
+    <button id="dark">Switch to Dark Mode</button>
+
+    <h1 id="title"></h1>
+
+    <h3 id="time"></h3>
+
+<script> 
+
+
+    const name = prompt("Enter your name","Anonymous");
+    
+    title.innerText += `Welcome ${name}`;
+    
+    
+    const dmode = document.getElementById('dark');
+    
+    dmode.onclick = function changeColor(){
+        
+        document.body.style.backgroundColor = '#474643';
+        document.body.style.color = 'white';
+        document.body.style.fontFamily = 'Helvetica';
+       
+    }
+    
+    
+    const ctime = document.getElementById('time');
+    
+    
+    function clock(){
+        let date = new Date();
+        let time = date.toLocaleTimeString();
+        ctime.innerText = time;
+    }
+    
+    // clock();
+    
+    setInterval(clock,1000);
+    
+    
+    </script>
+
+</body>
+</html>
+
